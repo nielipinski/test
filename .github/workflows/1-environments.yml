@@ -11,7 +11,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   deploy_test:
-    runs-on: ubuntu-latest
+    runs-on: LocalWin11
     environment: test
     steps:
       - name: deploy
@@ -20,7 +20,7 @@ jobs:
 
   deploy_prod:
     needs: deploy_test
-    runs-on: ubuntu-latest
+    runs-on: LocalWin11
     environment: prod
     steps:
       - name: deploy
