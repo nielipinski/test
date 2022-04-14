@@ -20,7 +20,7 @@ jobs:
 
   deploy_prod:
     needs: deploy_test
-    runs-on: LocalWin11
+    runs-on: self-hosted
     environment: prod
     steps:
       - name: deploy
