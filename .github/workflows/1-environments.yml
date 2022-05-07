@@ -18,6 +18,15 @@ jobs:
         run: |
           echo "This is my Secret: ${{ secrets.SECRET_1 }}"
 
+  deploy_uat:
+    needs: deploy_test
+    runs-on: self-hosted
+    environment: uat
+    steps:
+      - name: deploy
+        run: |
+          echo "This is my uat deployment"
+
   deploy_prod:
     needs: deploy_test
     runs-on: self-hosted
